@@ -27,20 +27,20 @@ const SuccessScreen: React.FC<SuccessScreenProps> = ({ data, onCreateNew }) => {
             <div className="flex justify-center mb-6">
                 <CheckCircleIcon />
             </div>
-            <h2 className="text-3xl font-bold font-lora text-indigo-100">Capsule Sealed!</h2>
-            <p className="mt-4 text-lg text-slate-300">
+            <h2 className="text-3xl font-bold font-lora text-indigo-100 text-glow">Capsule Sealed!</h2>
+            <p className="mt-4 text-lg text-slate-300 text-glow">
                 Your message to the future is now safely stored. We will send it to
                 <strong className="text-indigo-300 font-semibold"> {email} </strong> 
                 on 
                 <strong className="text-indigo-300 font-semibold"> {formattedDate}</strong>.
             </p>
-            <p className="mt-4 text-slate-400">
+            <p className="mt-4 text-slate-400 text-glow">
                 See you in the future!
             </p>
             <div className="mt-8">
                 <button
                     onClick={onCreateNew}
-                    className="inline-flex justify-center items-center py-2 px-6 border border-transparent shadow-sm text-md font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-indigo-500 transition-transform transform hover:scale-105"
+                    className="inline-flex justify-center items-center py-2 px-6 border border-transparent shadow-sm text-md font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-indigo-500 transition-transform transform hover:scale-105 text-glow"
                 >
                     Create Another Capsule
                 </button>

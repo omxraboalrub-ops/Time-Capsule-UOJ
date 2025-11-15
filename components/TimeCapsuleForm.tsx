@@ -88,7 +88,7 @@ const TimeCapsuleForm: React.FC<TimeCapsuleFormProps> = ({ onFormSubmit }) => {
     <div className="max-w-4xl mx-auto bg-slate-800/50 backdrop-blur-sm p-6 sm:p-10 rounded-2xl shadow-2xl shadow-indigo-900/50 border border-slate-700">
       <form onSubmit={handleSubmit} className="space-y-8">
         <div>
-          <label htmlFor="email" className="block text-lg font-medium text-indigo-200">
+          <label htmlFor="email" className="block text-lg font-medium text-indigo-200 text-glow">
             Your Future Email Address
           </label>
           <input
@@ -103,7 +103,7 @@ const TimeCapsuleForm: React.FC<TimeCapsuleFormProps> = ({ onFormSubmit }) => {
         </div>
 
         <div>
-          <label htmlFor="letter" className="block text-lg font-medium text-indigo-200">
+          <label htmlFor="letter" className="block text-lg font-medium text-indigo-200 text-glow">
             Letter to Your Future Self
           </label>
           <textarea
@@ -119,11 +119,11 @@ const TimeCapsuleForm: React.FC<TimeCapsuleFormProps> = ({ onFormSubmit }) => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <label htmlFor="attachments" className="block text-lg font-medium text-indigo-200 mb-2">
+              <label htmlFor="attachments" className="block text-lg font-medium text-indigo-200 mb-2 text-glow">
                 Attach Memories
               </label>
               <label htmlFor="file-upload" className="relative cursor-pointer bg-slate-900/70 rounded-md font-medium text-indigo-400 hover:text-indigo-300 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-slate-800 focus-within:ring-indigo-500 border-2 border-dashed border-slate-600 flex justify-center items-center h-24 px-6 transition-all hover:border-indigo-500">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3 text-glow">
                   <UploadIcon />
                   <span>Upload images or videos</span>
                 </div>
@@ -132,7 +132,7 @@ const TimeCapsuleForm: React.FC<TimeCapsuleFormProps> = ({ onFormSubmit }) => {
             </div>
 
             <div>
-              <label htmlFor="deliveryDate" className="block text-lg font-medium text-indigo-200">
+              <label htmlFor="deliveryDate" className="block text-lg font-medium text-indigo-200 text-glow">
                 Delivery Date
               </label>
               <div className="relative mt-2">
@@ -155,7 +155,7 @@ const TimeCapsuleForm: React.FC<TimeCapsuleFormProps> = ({ onFormSubmit }) => {
 
         {files.length > 0 && (
           <div>
-            <h3 className="text-lg font-medium text-indigo-200">Your Memories:</h3>
+            <h3 className="text-lg font-medium text-indigo-200 text-glow">Your Memories:</h3>
             <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {previews.map((preview, index) => (
                 <div key={index} className="relative group">
@@ -171,20 +171,20 @@ const TimeCapsuleForm: React.FC<TimeCapsuleFormProps> = ({ onFormSubmit }) => {
                       X
                     </button>
                   </div>
-                  <p className="text-xs text-center mt-1 truncate text-slate-300">{files[index].name}</p>
+                  <p className="text-xs text-center mt-1 truncate text-slate-300 text-glow">{files[index].name}</p>
                 </div>
               ))}
             </div>
           </div>
         )}
 
-        {error && <p className="text-red-400 text-sm text-center">{error}</p>}
+        {error && <p className="text-red-400 text-sm text-center text-glow">{error}</p>}
 
         <div className="text-center pt-4">
           <button
             type="submit"
             disabled={isLoading}
-            className="inline-flex justify-center items-center py-3 px-12 border border-transparent shadow-lg text-lg font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-indigo-500 disabled:bg-slate-600 disabled:text-gray-400 disabled:cursor-not-allowed transition-all transform hover:scale-105"
+            className="inline-flex justify-center items-center py-3 px-12 border border-transparent shadow-lg text-lg font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-indigo-500 disabled:bg-slate-600 disabled:text-gray-400 disabled:cursor-not-allowed transition-all transform hover:scale-105 text-glow"
           >
             {isLoading ? (
               <>

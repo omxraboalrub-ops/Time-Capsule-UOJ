@@ -18,7 +18,7 @@ const CloseIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 const EmbedModal: React.FC<EmbedModalProps> = ({ onClose }) => {
     const [copied, setCopied] = useState(false);
-    const embedCode = `<iframe src="${window.location.href.replace(/"/g, '&quot;')}" width="100%" height="900" style="border:none; border-radius: 12px;" title="FutureMe Time Capsule"></iframe>`;
+    const embedCode = `<iframe src="${window.location.href.replace(/"/g, '&quot;')}" width="100%" height="900" style="border:none; border-radius: 12px;" title="Capsule"></iframe>`;
 
     const handleCopy = () => {
         navigator.clipboard.writeText(embedCode).then(() => {
@@ -44,9 +44,9 @@ const EmbedModal: React.FC<EmbedModalProps> = ({ onClose }) => {
                 </button>
                 <div className="flex items-center space-x-3 mb-4">
                     <CodeIcon className="text-indigo-400"/>
-                    <h2 id="embed-title" className="text-2xl font-bold font-lora text-indigo-100">Embed on Your Site</h2>
+                    <h2 id="embed-title" className="text-2xl font-bold font-lora text-indigo-100 text-glow">Embed on Your Site</h2>
                 </div>
-                <p className="text-slate-300 mb-6">
+                <p className="text-slate-300 mb-6 text-glow">
                     Copy and paste this code into your website's HTML to embed the time capsule. For Google Sites, use the "Embed code" option.
                 </p>
                 <div className="relative">
@@ -61,7 +61,7 @@ const EmbedModal: React.FC<EmbedModalProps> = ({ onClose }) => {
                 <div className="text-center mt-6">
                     <button
                         onClick={handleCopy}
-                        className="inline-flex justify-center items-center py-2 px-6 border border-transparent shadow-sm text-md font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-indigo-500 transition-all transform hover:scale-105"
+                        className="inline-flex justify-center items-center py-2 px-6 border border-transparent shadow-sm text-md font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-indigo-500 transition-all transform hover:scale-105 text-glow"
                     >
                         {copied ? 'Copied!' : 'Copy Code'}
                     </button>
