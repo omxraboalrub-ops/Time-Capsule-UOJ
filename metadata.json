@@ -1,0 +1,5 @@
+{
+  "name": "FutureMe Time Capsule",
+  "description": "A simple web application to write and seal a digital time capsule. Write a letter to your future self, attach memories, and set a date to receive it back.",
+  "requestFramePermissions": []
+}
